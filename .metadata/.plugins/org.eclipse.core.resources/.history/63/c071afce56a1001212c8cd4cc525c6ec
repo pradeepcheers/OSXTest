@@ -1,0 +1,17 @@
+package sample.test.asd;
+
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+public class TestPrime {
+	
+	Prime primeObject = new Prime();
+	
+	@Test
+	public void testPrimeNumberOne() {
+		assertTrue(primeObject.isPrime(1));
+	}
+	
+
+}

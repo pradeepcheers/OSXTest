@@ -1,0 +1,13 @@
+package sample.test.asd;
+
+import org.junit.*;
+
+public class TestPrime {
+	
+	@Test
+	public void testPrimeNumber() {
+		
+	}
+	
+
+}

@@ -1,0 +1,9 @@
+package sample.test.asd;
+
+public class Prime {
+
+	public boolean isPrime(int number) {
+		
+		return true;
+	}
+}

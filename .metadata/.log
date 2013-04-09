@@ -1,0 +1,170 @@
+!SESSION 2013-04-09 20:07:40.155 -----------------------------------------------
+eclipse.buildId=2.9.0.201203011000-RELEASE
+java.version=1.6.0_43
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide -keyring /Users/pradeepcheers/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.springsource.sts.ide -keyring /Users/pradeepcheers/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-09 20:08:44.813
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2013-04-09 20:13:09.354 -----------------------------------------------
+eclipse.buildId=2.9.0.201203011000-RELEASE
+java.version=1.6.0_43
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.springsource.sts.ide -product com.springsource.sts.ide -product com.springsource.sts.ide -keyring /Users/pradeepcheers/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.springsource.sts.ide -product com.springsource.sts.ide -data /General Stuff/Pradeep/GIT/OSXTest -product com.springsource.sts.ide -keyring /Users/pradeepcheers/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-04-09 20:13:16.741
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:23:48.214
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:23:48.266
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:42:35.227
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:42:35.295
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:57:37.847
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:57:37.889
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:59:50.503
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:59:50.531
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:59:51.691
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 20:59:51.694
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:04:48.228
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:04:48.273
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:04:51.526
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:04:51.556
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:05:36.037
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:05:36.084
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:10:14.121
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:10:14.267
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:11:48.397
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:11:48.400
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:30:28.469
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:30:28.506
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:30:44.023
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:30:44.026
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:32:13.448
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:32:13.475
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:32:20.684
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:32:20.695
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:33:33.047
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:33:33.055
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:34:02.754
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:34:02.758
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:46:48.902
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:46:48.938
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:48:18.373
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:48:18.375
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:59:36.664
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 21:59:36.675
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:05:28.468
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:05:28.503
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:06:21.552
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:06:21.555
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:09:50.800
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:09:50.812
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:12:24.551
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:12:24.553
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:19:32.686
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:19:32.689
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:22:40.396
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-04-09 22:22:40.399
+!MESSAGE Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
