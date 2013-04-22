@@ -4,6 +4,10 @@ public class Test {
 	
 	public static void main(String [] v){
 	
+		String s = "  $   my name   is    pradeep  and I'm   an   engineer   $";
+		s = s.trim().replaceAll(" +"," ");
+		System.out.println(s);
+		
 		String str = "99777666";
 		String temp = "";
 		int numberLength = str.length();

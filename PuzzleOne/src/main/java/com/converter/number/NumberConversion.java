@@ -27,24 +27,18 @@ public class NumberConversion {
 		
 		if (outArray[2] != null && !outArray[2].equalsIgnoreCase(""))
 			outPut = outArray[2] + " million ";
-		if (outArray[1] != null && !outArray[1].equalsIgnoreCase("") ) {
-			if (outPut.endsWith(" million ") && outArray[1].equalsIgnoreCase("zero")) {
+		if (outArray[1] != null && !outArray[1].equalsIgnoreCase("") )
+			if (outPut.endsWith(" million ") && outArray[1].equalsIgnoreCase("zero"))
 				outArray[1] = "";
-			} else if (outArray[0].equalsIgnoreCase("zero")) {
-				outPut += outArray[1] + " thousand";
-			} else {
+			else
 				outPut += outArray[1] + " thousand ";
-			}
-		}
-		if (outArray[0] != null && !outArray[0].equalsIgnoreCase("")){
-			if (outPut.endsWith(" thousand") && outArray[0].equalsIgnoreCase("zero")) {
+		if (outArray[0] != null && !outArray[0].equalsIgnoreCase(""))
+			if (outPut.endsWith(" thousand ") && outArray[0].equalsIgnoreCase("zero"))
 				outArray[0] = "";
-			} else {
+			else
 				outPut += outArray[0];
-			}
-		}
 		
-		return  outPut;
+		return  outPut.trim().replaceAll(" +", " ");
 	}
 	
 	private int validator(String numberToConvert) throws NotANumberException{
