@@ -16,7 +16,7 @@ public class HundredNaturalNumber {
 	}
 	
 	private String outputAppender(int hundredthPlace) {
-		if (hundredthPlace != 0 && (tenthAndUnitNumbersInAlphabet.equals("") || tenthAndUnitNumbersInAlphabet.equalsIgnoreCase(Constants.ZERO_ALPHABET)))
+		if (hundredthPlace != 0 && (tenthAndUnitNumbersInAlphabet.equals("") || tenthAndUnitNumbersInAlphabet.equalsIgnoreCase(Constants.ZERO_IN_ALPHABET)))
 			return hundredthNumberInAlphabet; 
 		else if (hundredthPlace != 0 && !tenthAndUnitNumbersInAlphabet.equals(""))
 			return hundredthNumberInAlphabet + Constants.AND + tenthAndUnitNumbersInAlphabet;

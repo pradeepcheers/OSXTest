@@ -11,10 +11,16 @@ public class Constants {
 	public static final int ONE = 1;
 	
 	public static final String ZERO_STRING = "0";
-	public static final String ZERO_ALPHABET = "zero";
+	public static final String ZERO_IN_ALPHABET = "zero";
 
 	public static final String HUNDRED = " hundred";
 	public static final String AND = " and ";
+	public static final String MILLION = " million ";
+	public static final String THOUSAND = " thousand ";
+	public static final String QUOTES = "";
+	public static final String SINGLE_SPACE = " ";
+	public static final String MULTIPLE_SPACES = " +";
+	public static final String NUMBER_PATTERN = "([0-9]*)";
 	
 	public final static Map<Integer, String> ALPHABET_CONSTANTS = CommonMethods.createMap();
 		
