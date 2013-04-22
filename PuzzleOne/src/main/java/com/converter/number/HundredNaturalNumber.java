@@ -3,15 +3,15 @@ package com.converter.number;
 import com.converter.number.utility.CommonMethods;
 import com.converter.number.utility.Constants;
 
-public class HundredNatural {
+public class HundredNaturalNumber {
 	
 	private String number = "", hundredthNumberInAlphabet = "", tenthAndUnitNumbersInAlphabet = "";
 	
-	public String getNumberInEnglish(String number){
+	public String getHundredthNaturalAlphabetNumber(String number){
 		this.number = number;	
 		if(this.getHundredthPlace() != 0)
 			hundredthNumberInAlphabet = getHundredthNumberInAlphabet();	
-		tenthAndUnitNumbersInAlphabet = new TenNatural().getTenNaturalNumber(this.getTenthAndUnitPlace());
+		tenthAndUnitNumbersInAlphabet = new TenNaturalNumber().getTenthNaturalAlphabetNumber(this.getTenthAndUnitPlace());
 		return outputAppender(this.getHundredthPlace());
 	}
 	
@@ -32,8 +32,8 @@ public class HundredNatural {
 	}
 	
 	private String getHundredthNumberInAlphabet() {
-		UnitNatural hundredthNatural = new UnitNatural();
-		hundredthNumberInAlphabet = hundredthNatural.getAlphabeticalNumber(this.getHundredthPlace());
+		UnitNaturalNumber hundredthNatural = new UnitNaturalNumber();
+		hundredthNumberInAlphabet = hundredthNatural.getUnitNaturalAlphabetNumber(this.getHundredthPlace());
 		return hundredthNumberInAlphabet += Constants.HUNDRED;
 	}
 

@@ -7,10 +7,10 @@ import com.converter.number.exception.NotANumberException;
 import com.converter.number.exception.OutOfLimitException;
 import com.converter.number.utility.Constants;
 
-public class NumberConversion {
+public class NaturalNumber {
 	private int number;
 	private String numberInString;
-	HundredNatural hundredNatural = new HundredNatural();
+	HundredNaturalNumber hundredNatural = new HundredNaturalNumber();
 	
 	public String converter(String numberToConvert) throws OutOfLimitException, NotANumberException {
 	    number = this.validator(numberToConvert);
@@ -22,7 +22,7 @@ public class NumberConversion {
 		for(int factor=0, args=0, i = numberLength; i>0; i=i-3, args++) {
 			factor = (i < 3) ? 0 : i-3;
 			temp = numberInString.substring(factor, i);
-			outArray[args] = hundredNatural.getNumberInEnglish(temp);
+			outArray[args] = hundredNatural.getHundredthNaturalAlphabetNumber(temp);
 		}
 		
 		if (outArray[2] != null && !outArray[2].equalsIgnoreCase(""))
@@ -33,7 +33,7 @@ public class NumberConversion {
 			else
 				outPut += outArray[1] + " thousand ";
 		if (outArray[0] != null && !outArray[0].equalsIgnoreCase(""))
-			if (outPut.endsWith(" thousand ") && outArray[0].equalsIgnoreCase("zero"))
+			if ((outPut.endsWith(" million ") || outPut.endsWith(" thousand ")) && outArray[0].equalsIgnoreCase("zero"))
 				outArray[0] = "";
 			else
 				outPut += outArray[0];
