@@ -3,26 +3,29 @@ package com.converter.number;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.converter.number.exception.NotANumberException;
+import com.converter.number.exception.InvalidInputException;
 import com.converter.number.exception.OutOfLimitException;
 import com.converter.number.utility.Constants;
 
 public class NaturalNumber {
-	private int number;
-	private String numberInString;
-	HundredNaturalNumber hundredNatural = new HundredNaturalNumber();
+	private String number;
+	private int numberLength;
 	
-	public String converter(String numberToConvert) throws OutOfLimitException, NotANumberException {
-	    number = this.validator(numberToConvert);
-		this.boundChecker();
-		numberInString = String.valueOf(number);
+	public NaturalNumber (String inputNumber) throws InvalidInputException, OutOfLimitException {
+		this.setNumber(validateNumberPattern(inputNumber));
+		this.setNumberLength(this.number.length());
+	}
+	
+	
+	public String getStringRepresentationOfNumber() throws OutOfLimitException, InvalidInputException {
+		
 		int numberLength = getNumberLength();
 		String outPut= "",temp = "";
 		String [] outArray = new String[3];
 		for(int factor=0, args=0, i = numberLength; i>0; i=i-3, args++) {
 			factor = (i < 3) ? 0 : i-3;
-			temp = numberInString.substring(factor, i);
-			outArray[args] = hundredNatural.getHundredthNaturalAlphabetNumber(temp);
+			temp = number.substring(factor, i);
+			outArray[args] = new HundredNaturalNumber().getStringRepresentationOfHundredthNaturalNumber(temp);
 		}
 		
 		if (outArray[2] != null && !outArray[2].equalsIgnoreCase(""))
@@ -41,25 +44,41 @@ public class NaturalNumber {
 		return  outPut.trim().replaceAll(" +", " ");
 	}
 	
-	private int validator(String numberToConvert) throws NotANumberException{
+	private static String validateNumberPattern(String number) throws InvalidInputException, OutOfLimitException{
+		if(number == null)
+			throw new InvalidInputException();
+		
+		Long longNumber = Long.parseLong(number);
+		
+		if(longNumber < Constants.ZERO)
+			throw new InvalidInputException();
+		
+		number = String.valueOf(longNumber);
+		
 		Pattern p = Pattern.compile( "([0-9]*)" );
-		Matcher m = p.matcher(numberToConvert);
-		if(m.matches()) {
-//			System.out.println(Integer.parseInt(numberToConvert));
-			return Integer.parseInt(numberToConvert);
-		}
-		else
-			throw new NotANumberException();
+		Matcher m = p.matcher(number);
+		if(!m.matches())
+			throw new InvalidInputException();
+		
+		if(number.length() > Constants.MAX_LIMIT_LENGTH || Long.parseLong(number) < Constants.MIN_LIMIT_LENGTH)
+			throw new OutOfLimitException();
+		
+		return number;
 	}
 	
-	private void boundChecker () throws OutOfLimitException{
-		if(this.getNumberLength() > Constants.MAX_LIMIT_LENGTH || number < Constants.MIN_LIMIT_LENGTH){
-			throw new OutOfLimitException();
-		}
+	protected String getNumber() {
+		return number;
+	}
+
+	private void setNumber(String number) {
+		this.number = number;
 	}
 	
 	private int getNumberLength () {
-		return String.valueOf(number).length();
+		return numberLength;
 	}
 
+	public void setNumberLength(int numberLength) {
+		this.numberLength = numberLength;
+	}
 }

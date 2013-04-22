@@ -7,11 +7,11 @@ public class HundredNaturalNumber {
 	
 	private String number = "", hundredthNumberInAlphabet = "", tenthAndUnitNumbersInAlphabet = "";
 	
-	public String getHundredthNaturalAlphabetNumber(String number){
+	public String getStringRepresentationOfHundredthNaturalNumber(String number){
 		this.number = number;	
 		if(this.getHundredthPlace() != 0)
 			hundredthNumberInAlphabet = getHundredthNumberInAlphabet();	
-		tenthAndUnitNumbersInAlphabet = new TenNaturalNumber().getTenthNaturalAlphabetNumber(this.getTenthAndUnitPlace());
+		tenthAndUnitNumbersInAlphabet = new TenNaturalNumber().getStringRepresentationOfTenthNaturalNumber(this.getTenthAndUnitPlace());
 		return outputAppender(this.getHundredthPlace());
 	}
 	
@@ -33,7 +33,7 @@ public class HundredNaturalNumber {
 	
 	private String getHundredthNumberInAlphabet() {
 		UnitNaturalNumber hundredthNatural = new UnitNaturalNumber();
-		hundredthNumberInAlphabet = hundredthNatural.getUnitNaturalAlphabetNumber(this.getHundredthPlace());
+		hundredthNumberInAlphabet = hundredthNatural.getStringRepresentationOfUnitNaturalNumber(this.getHundredthPlace());
 		return hundredthNumberInAlphabet += Constants.HUNDRED;
 	}
 

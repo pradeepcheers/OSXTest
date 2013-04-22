@@ -1,6 +1,6 @@
 package com.converter.number.exception;
 
-public class NotANumberException extends Exception {
+public class InvalidInputException extends Exception {
 
 	/**
 	 * 

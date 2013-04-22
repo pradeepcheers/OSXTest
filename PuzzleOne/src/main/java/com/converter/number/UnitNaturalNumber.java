@@ -4,7 +4,7 @@ import com.converter.number.utility.Constants;
 
 public class UnitNaturalNumber {
 	
-	public String getUnitNaturalAlphabetNumber(int number) {
+	public String getStringRepresentationOfUnitNaturalNumber(int number) {
 		String unitNumber;
 		if(String.valueOf(number).length() == Constants.ONE)
 			unitNumber = Constants.ALPHABET_CONSTANTS.get(number);
