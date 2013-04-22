@@ -1,28 +1,34 @@
 package com.converter.number;
 
+import com.converter.number.exception.InvalidInputException;
 import com.converter.number.utility.*;
 
-public class TenNaturalNumber {
+public class TenNaturalNumber extends NaturalNumber
+{	
+	public TenNaturalNumber(String inputNumber) throws InvalidInputException
+	{
+		super(inputNumber);
+	}
 	
-	UnitNaturalNumber unitNatural = new UnitNaturalNumber();
-	CommonMethods commonMethods = new CommonMethods();
-	
-	public String getStringRepresentationOfTenthNaturalNumber(String number) {	
-		if(getTenthPlaceInteger(number) == 0)
-			return unitNatural.getStringRepresentationOfUnitNaturalNumber(Integer.parseInt(number));
-		else if(Constants.ALPHABET_CONSTANTS.containsKey(Integer.parseInt(number)))
-			return Constants.ALPHABET_CONSTANTS.get(Integer.parseInt(number));
+	public String getStringRepresentationOfTenthNaturalNumber() throws InvalidInputException 
+	{	
+		if(getTenthPlaceInteger(this.getNumber()) == 0)
+			return new UnitNaturalNumber(this.getNumber()).getStringRepresentationOfUnitNaturalNumber();
+		else if(Constants.ALPHABET_CONSTANTS.containsKey(Integer.parseInt(this.getNumber())))
+			return Constants.ALPHABET_CONSTANTS.get(Integer.parseInt(this.getNumber()));
 		else {
-			return Constants.ALPHABET_CONSTANTS.get(Integer.parseInt(this.getTenthPlaceInteger(number)+Constants.ZERO_STRING)) + " " + unitNatural.getStringRepresentationOfUnitNaturalNumber(this.getUnitPlace(number));
+			return Constants.ALPHABET_CONSTANTS.get(Integer.parseInt(this.getTenthPlaceInteger(this.getNumber())+Constants.ZERO_STRING)) 
+					+ Constants.SINGLE_SPACE
+					+ new UnitNaturalNumber(String.valueOf(this.getUnitPlace(this.getNumber()))).getStringRepresentationOfUnitNaturalNumber();
 		}
 	}
 	
 	private int getTenthPlaceInteger(String number) {
-		return commonMethods.getLeftMostPlaceValueInInteger(number);
+		return getFirstDigit(number);
 	}
 	
 	private int getUnitPlace(String number) {
-		return commonMethods.getLeftButOnePlaceVaueInInt(number);
+		return getSecondDigit(number);
 	}
 
 }

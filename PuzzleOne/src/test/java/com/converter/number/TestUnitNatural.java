@@ -2,86 +2,88 @@ package com.converter.number;
 
 import org.junit.Test;
 
+import com.converter.number.exception.InvalidInputException;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class TestUnitNatural {
 	
 	@Test
-	public void shouldBeZero(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(0), is("zero"));
+	public void shouldBeZero() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("0");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("zero"));
 	}
 	
 	@Test
-	public void shouldBeOne(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(1), is("one"));
+	public void shouldBeOne() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("1");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("one"));
 	}
 
 	@Test
-	public void shouldBeTwo(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(2), is("two"));
+	public void shouldBeTwo() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("2");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("two"));
 	}
 
 	@Test
-	public void shouldBeThree(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(3), is("three"));
+	public void shouldBeThree() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("3");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("three"));
 	}
 	
 	@Test
-	public void shouldBeFour(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(4), is("four"));
+	public void shouldBeFour() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("4");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("four"));
 	}
 	
 	@Test
-	public void shouldBeFive(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(5), is("five"));
+	public void shouldBeFive() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("5");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("five"));
 	}
 	
 	@Test
-	public void shouldBeSix(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(6), is("six"));
+	public void shouldBeSix() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("6");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("six"));
 	}
 	
 	@Test
-	public void shouldBeSeven(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(7), is("seven"));
+	public void shouldBeSeven() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("7");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("seven"));
 	}
 	
 	@Test
-	public void shouldBeEight(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(8), is("eight"));
+	public void shouldBeEight() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("8");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("eight"));
 	}
 	
 	@Test
-	public void shouldBeNine(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(9), is("nine"));
+	public void shouldBeNine() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("9");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("nine"));
 	}
 	
 	@Test
-	public void shouldBeTen(){
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(10), is("ten"));
+	public void shouldBeTen() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("10");
+		assertThat (unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("ten"));
 	}
 	
 	@Test (expected=ArrayIndexOutOfBoundsException.class)
 	public void shouldNotBeNegetive() throws Exception{
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		unitNumber.getStringRepresentationOfUnitNaturalNumber(-1);
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("-1");
+		unitNumber.getStringRepresentationOfUnitNaturalNumber();
 	}
 	
 	@Test
-	public void shouldRemoveLeadingZeros() {
-		UnitNaturalNumber unitNumber = new UnitNaturalNumber();
-		assertThat(unitNumber.getStringRepresentationOfUnitNaturalNumber(00001), is("one"));
+	public void shouldRemoveLeadingZeros() throws InvalidInputException {
+		UnitNaturalNumber unitNumber = new UnitNaturalNumber("00001");
+		assertThat(unitNumber.getStringRepresentationOfUnitNaturalNumber(), is("one"));
 	}
 }

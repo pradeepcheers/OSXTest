@@ -1,21 +1,35 @@
 package com.converter.number;
 
-import com.converter.number.utility.CommonMethods;
+import com.converter.number.exception.InvalidInputException;
 import com.converter.number.utility.Constants;
 
-public class HundredNaturalNumber {
+
+public class HundredNaturalNumber extends NaturalNumber{
 	
-	private String number = "", hundredthNumberInAlphabet = "", tenthAndUnitNumbersInAlphabet = "";
+	public HundredNaturalNumber(String inputNumber)	throws InvalidInputException 
+	{
+		super(inputNumber);
+		
+		if(this.getNumberLength() > Constants.THREE)
+		{
+			throw new InvalidInputException(Constants.Error.NATURAL_BOUNDARY);
+		}
+	}
+
+	private String hundredthNumberInAlphabet = "", tenthAndUnitNumbersInAlphabet = "";
 	
-	public String getStringRepresentationOfHundredthNaturalNumber(String number){
-		this.number = number;	
+	public String getStringRepresentationOfHundredthNaturalNumber() throws InvalidInputException
+	{
 		if(this.getHundredthPlace() != 0)
 			hundredthNumberInAlphabet = getHundredthNumberInAlphabet();	
-		tenthAndUnitNumbersInAlphabet = new TenNaturalNumber().getStringRepresentationOfTenthNaturalNumber(this.getTenthAndUnitPlace());
+		
+		tenthAndUnitNumbersInAlphabet = new TenNaturalNumber(this.getTenthAndUnitPlace()).getStringRepresentationOfTenthNaturalNumber();
+		
 		return outputAppender(this.getHundredthPlace());
 	}
 	
-	private String outputAppender(int hundredthPlace) {
+	private String outputAppender(int hundredthPlace) 
+	{
 		if (hundredthPlace != 0 && (tenthAndUnitNumbersInAlphabet.equals("") || tenthAndUnitNumbersInAlphabet.equalsIgnoreCase(Constants.ZERO_IN_ALPHABET)))
 			return hundredthNumberInAlphabet; 
 		else if (hundredthPlace != 0 && !tenthAndUnitNumbersInAlphabet.equals(""))
@@ -24,23 +38,26 @@ public class HundredNaturalNumber {
 			return tenthAndUnitNumbersInAlphabet;
 	}
 	
-	private int getHundredthPlace() {
-		if(number.length() == 3)
-			return new CommonMethods().getLeftMostPlaceValueInInteger(number);
+	private int getHundredthPlace() 
+	{
+		if(this.getNumber().length() == 3)
+			return this.getFirstDigit(this.getNumber());
 		else
-			return 0;
+			return Constants.ZERO;
 	}
 	
-	private String getHundredthNumberInAlphabet() {
-		UnitNaturalNumber hundredthNatural = new UnitNaturalNumber();
-		hundredthNumberInAlphabet = hundredthNatural.getStringRepresentationOfUnitNaturalNumber(this.getHundredthPlace());
+	private String getHundredthNumberInAlphabet() throws InvalidInputException
+	{
+		UnitNaturalNumber hundredthNatural = new UnitNaturalNumber(String.valueOf(this.getHundredthPlace()));
+		hundredthNumberInAlphabet = hundredthNatural.getStringRepresentationOfUnitNaturalNumber();
 		return hundredthNumberInAlphabet += Constants.HUNDRED;
 	}
 
-	private String getTenthAndUnitPlace() {
-		if(number.length() == 3)
-			return number.substring(Constants.ONE);
+	private String getTenthAndUnitPlace() 
+	{
+		if(this.getNumberLength() == 3)
+			return this.getNumber().substring(Constants.ONE);
 		else
-			return number;
+			return this.getNumber();
 	}
 }
