@@ -9,18 +9,20 @@ public class TenNaturalNumber extends NaturalNumber
 	public TenNaturalNumber(String inputNumber) throws NaturalNumberException
 	{
 		super(inputNumber);
+		
+		if(this.getNumberLength() > Constants.TWO)
+		{
+			throw new NaturalNumberException(Constants.Error.NATURAL_BOUNDARY);
+		}
 	}
 	
 	public String getStringEquivalentNumber () throws NaturalNumberException 
 	{	
-//		if(this.getFirstDigit(this.getNumber()) == 0)
-//		{
-//			return new UnitNaturalNumber(this.getNumber()).getStringEquivalentNumber();
-//		} 
-//		else
-		
-		
-		if (Constants.BASIC_MAPPINGS.containsKey(this.getNumberAsInteger()))
+		if(this.getFirstDigit(this.getNumber()) == 0)
+		{
+			return new UnitNaturalNumber(this.getNumber()).getStringEquivalentNumber();
+		} 
+		else if (Constants.BASIC_MAPPINGS.containsKey(this.getNumberAsInteger()))
 		{	
 			return Constants.BASIC_MAPPINGS.get(this.getNumberAsInteger());
 		}

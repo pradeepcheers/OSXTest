@@ -22,7 +22,7 @@ public abstract class NaturalNumber implements Convertable
 	
 	public static String validateNumberPattern(String number) throws NaturalNumberException
 	{
-		if(number == null)
+		if(number == null || number.equals(""))
 			throw new NaturalNumberException(Constants.Error.NATURAL_NULL);
 		
 		Long longNumber = Long.parseLong(number);
