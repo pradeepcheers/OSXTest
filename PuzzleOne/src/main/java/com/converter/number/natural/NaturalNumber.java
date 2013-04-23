@@ -11,11 +11,13 @@ public abstract class NaturalNumber implements Convertable
 {
 	private String number;
 	private int numberLength;
-	
+	private int numberAsInteger;
+
 	public NaturalNumber (String inputNumber) throws NaturalNumberException 
 	{
 		this.setNumber(validateNumberPattern(inputNumber));
-		this.setNumberLength(this.number.length());
+		this.setNumberLength(this.getNumber().length());
+		this.setNumberAsInteger(Integer.parseInt(this.getNumber()));
 	}
 	
 	public static String validateNumberPattern(String number) throws NaturalNumberException
@@ -53,8 +55,16 @@ public abstract class NaturalNumber implements Convertable
 		return numberLength;
 	}
 
-	public void setNumberLength(int numberLength) {
+	private void setNumberLength(int numberLength) {
 		this.numberLength = numberLength;
+	}
+	
+	protected int getNumberAsInteger() {
+		return numberAsInteger;
+	}
+
+	private void setNumberAsInteger(int numberAsInteger) {
+		this.numberAsInteger = numberAsInteger;
 	}
 	
 	protected int getFirstDigit(String number) {
