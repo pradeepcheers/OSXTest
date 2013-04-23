@@ -17,7 +17,9 @@ public class TenNaturalNumber extends NaturalNumber
 //		{
 //			return new UnitNaturalNumber(this.getNumber()).getStringEquivalentNumber();
 //		} 
-//		else 
+//		else
+		
+		
 		if (Constants.BASIC_MAPPINGS.containsKey(this.getNumberAsInteger()))
 		{	
 			return Constants.BASIC_MAPPINGS.get(this.getNumberAsInteger());
