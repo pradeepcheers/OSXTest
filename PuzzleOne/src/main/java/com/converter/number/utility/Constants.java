@@ -27,7 +27,7 @@ public class Constants {
 	public static final String MULTIPLE_SPACES = " +";
 	public static final String NUMBER_PATTERN = "([0-9]*)";
 	
-	public final static Map<Integer, String> ALPHABET_CONSTANTS = createMap();
+	public final static Map<Integer, String> BASIC_MAPPINGS = createMap();
 	
 	static Map<Integer, String> createMap(){
 		Map<Integer, String> tempMap = new HashMap<Integer, String>();

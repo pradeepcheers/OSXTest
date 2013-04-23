@@ -5,7 +5,7 @@ package com.converter.number.exception;
  * @author Pradeep
  *
  */
-public class InvalidInputException extends Exception {
+public class NaturalNumberException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 
@@ -13,7 +13,7 @@ public class InvalidInputException extends Exception {
 	 * @param message
 	 * @see java.lang.Exception
 	 */
-	public InvalidInputException(String message) {
+	public NaturalNumberException(String message) {
 		super(message);
 	}
 }
